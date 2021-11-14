@@ -13,8 +13,8 @@ print("seckey",seckey)
 
 ISR = pytz.timezone('Asia/Jerusalem')
 session = boto3.Session(
-    aws_access_key_id="",
-    aws_secret_access_key="",
+    aws_access_key_id=acckey[0].strip(),
+    aws_secret_access_key=seckey[0].strip(),
     region_name="us-east-2",
 )
 
