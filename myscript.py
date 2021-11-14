@@ -4,9 +4,9 @@ from datetime import datetime,timezone
 import pytz
 import boto3 
 
-with open ("/mnt/hello/acckey", "r") as myfile:
+with open ("/mnt/secret/acckey", "r") as myfile:
     acckey=myfile.readlines()
-with open ("/mnt/hello/seckey", "r") as myfile:
+with open ("/mnt/secret/seckey", "r") as myfile:
     seckey=myfile.readlines()
 print("acckey",acckey)
 print("seckey",seckey)
