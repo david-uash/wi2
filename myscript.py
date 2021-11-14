@@ -4,6 +4,12 @@ from datetime import datetime,timezone
 import pytz
 import boto3 
 
+with open ("/mnt/hello/acckey", "r") as myfile:
+    acckey=myfile.readlines()
+with open ("/mnt/hello/seckey", "r") as myfile:
+    seckey=myfile.readlines()
+print("acckey",acckey)
+print("seckey",seckey)
 
 ISR = pytz.timezone('Asia/Jerusalem')
 session = boto3.Session(
