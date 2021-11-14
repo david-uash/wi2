@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh '''
                     whoami
-                    ./mymodules.sh
+                    bash mymodules.sh
                     python myscript.py
                    '''    
             }
