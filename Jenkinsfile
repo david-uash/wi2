@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
-                    pip install numpy
+                    /usr/local/bin/pip3 install numpy
                     python myscript.py
                    '''    
             }
