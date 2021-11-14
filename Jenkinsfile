@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
+                    pip install --upgrade pip
                     pip install numpy
                     python myscript.py
                    '''    
