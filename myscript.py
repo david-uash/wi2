@@ -1,10 +1,16 @@
 #!/usr/local/bin/python
 
+from datetime import datetime,timezone
+import pytz
+import boto3 
 
-import subprocess
-import sys
 
+ISR = pytz.timezone('Asia/Jerusalem')
+session = boto3.Session(
+    aws_access_key_id="",
+    aws_secret_access_key="",
+    region_name="us-east-2",
+)
 
-import numpy as np
-a = np.zeros((2,2))
-print(a)
+print("hello world")
+
