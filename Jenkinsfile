@@ -3,8 +3,10 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'pip install numpy'
-                sh 'python myscript.py'
+                sh '''
+                    pip install numpy
+                    python myscript.py
+                   '''    
             }
         }
     }
