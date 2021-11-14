@@ -41,7 +41,7 @@ for instance in ec2.instances.all():
        else:
            print("in the past")
            print("shut this machine",instance)
-           #ec2client.stop_instances(InstanceIds=[instance.id])
+           ec2client.stop_instances(InstanceIds=[instance.id])
   print("###########################################")
 
 
