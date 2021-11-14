@@ -2,7 +2,7 @@ pipeline {
     agent { docker 
            { 
                image 'python'
-               args '-u root -v /tmp/python:/mnt/hello/'
+               args '-u root -v /tmp/python:/mnt/secret/'
            } 
           }
     stages {
