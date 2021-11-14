@@ -10,7 +10,7 @@ pipeline {
             steps {
                 sh '''
                     whoami
-                    /usr/local/bin/pip3 install numpy --user
+                    source mymodules.sh
                     python myscript.py
                    '''    
             }
