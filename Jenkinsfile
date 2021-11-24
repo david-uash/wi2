@@ -1,18 +1,18 @@
 pipeline {
     agent { docker 
            { 
-               image 'python'
-               args '-u root -v /tmp/python:/mnt/secret/'
+               image 'python:aws'
+               args '-u root' 
            } 
           }
     stages {
         stage('build') {
             steps {
+                withCredentials([gitUsernamePassword(credentialsId: 'my-credentials-id', gitToolName: 'git-tool')]) {
                 sh '''
-                    whoami
-                    bash mymodules.sh
                     python myscript.py
                    '''    
+                }
             }
         }
     }
