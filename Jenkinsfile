@@ -8,11 +8,11 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                withCredentials([gitUsernamePassword(credentialsId: 'my-credentials-id', gitToolName: 'git-tool')]) {
+#                withCredentials([gitUsernamePassword(credentialsId: 'my-credentials-id', gitToolName: 'git-tool')]) {
                 sh '''
                     python myscript.py
                    '''    
-                }
+#                }
             }
         }
     }
