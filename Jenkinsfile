@@ -5,13 +5,15 @@ pipeline {
                args '-u root' 
            } 
           }
+    environment {
+        ACCKEY="key002"
+        SECKEY="sec002"
+        MYVAR="var002"
+    }
     stages {
         stage('build') {
             steps {
                 sh '''
-                    export ACCKEY="key001"
-                    export SECKEY="sec001"
-                    export MYVAR="var001"
                     python myscript.py
                    '''    
             }
