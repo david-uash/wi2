@@ -6,10 +6,9 @@ pipeline {
            } 
           }
     environment {
-        ACCKEY="key002"
-        SECKEY="sec002"
-        MYVAR=credentials('SECKEY')
-            
+        ACCKEY=credentials('ACCKEY')
+        SECKEY=credentials('SECKEY')
+        MYVAR="myvar005"           
     }
     stages {
         stage('build') {
