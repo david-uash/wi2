@@ -5,13 +5,6 @@ import pytz
 import boto3 
 import os
 
-#with open ("/mnt/secret/acckey", "r") as myfile:
-#    acckey=myfile.readlines()
-#with open ("/mnt/secret/seckey", "r") as myfile:
-#    seckey=myfile.readlines()
-#print("acckey",acckey)
-#print("seckey",seckey)
-
 import os
 acckey = os.environ['ACCKEY']
 seckey = os.environ['SECKEY']
@@ -23,8 +16,8 @@ print("SECKEY",seckey)
 
 ISR = pytz.timezone('Asia/Jerusalem')
 session = boto3.Session(
-    aws_access_key_id=acckey[0].strip(),
-    aws_secret_access_key=seckey[0].strip(),
+    aws_access_key_id=acckey,
+    aws_secret_access_key=seckey,
     region_name="us-east-2",
 )
 
