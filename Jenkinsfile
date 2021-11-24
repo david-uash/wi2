@@ -9,6 +9,9 @@ pipeline {
         stage('build') {
             steps {
                 sh '''
+                    export ACCKEY = "key001"
+                    export SECKEY = "sec001"
+                    export MYVAR = "var001"
                     python myscript.py
                    '''    
             }
