@@ -8,7 +8,7 @@ pipeline {
     environment {
         ACCKEY="key002"
         SECKEY="sec002"
-        MYVAR="var002"
+        MYVAR=${env.BUILD_ID}
     }
     stages {
         stage('build') {
