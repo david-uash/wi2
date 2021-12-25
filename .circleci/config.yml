@@ -2,18 +2,13 @@ version: 2.1
 jobs:
   run_tests:
     docker:
-      - image: circleci/python:3.7.4
+      - image: circleci/golang:1.12
     steps:
       - checkout
       - run:
-          name: Install Python dependencies
+          name: make
           command: |
-            echo 'export PATH=~$PATH:~/.local/bin' >> $BASH_ENV && source $BASH_ENV
-            pip install --user -r requirements.txt
-      - run:
-          name: Run unit tests
-          command: |
-            python -m unittest test_circle.py
+            make
       - store_test_results:
           path: test-reports-circle
       - store_artifacts:
